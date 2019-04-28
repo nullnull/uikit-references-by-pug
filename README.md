@@ -1,6 +1,7 @@
-# nuxt
+# UIkit references for me by pug
 
-> Nuxt.js project
+[UIkit](https://getuikit.com/docs/introduction)をpugに変換しつつ個人的に分かりやすいようにまとめた。
+
 
 ## Build Setup
 
