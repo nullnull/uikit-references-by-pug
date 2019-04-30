@@ -4,9 +4,8 @@ main
     .uk-section(class="uk-width-1-2@m uk-width-1-1@s")
       .uk-container
         Grid
-    .uk-section(class="uk-width-1-2@m uk-visible@m")
-      .uk-container
-        GridRaw
+    div(class="uk-width-1-2@m uk-visible@m")
+      GridRaw
 </template>
 
 <script>

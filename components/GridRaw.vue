@@ -1,6 +1,6 @@
 <template lang="pug">
 pre
-  code.
+  code.language-pug.
     h1 Grid
     p
       | 基本は
@@ -94,3 +94,14 @@ pre
           br
           | ...
 </template>
+
+<script>
+
+import Prism from '~/plugins/prism'
+
+export default {
+  mounted() {
+    Prism.highlightAll()
+  }
+}
+</script>

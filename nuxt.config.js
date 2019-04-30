@@ -24,7 +24,8 @@ module.exports = {
    ** Build configuration
    */
   plugins: [
-    { src: '@/plugins/uikit.js' }
+    { src: '@/plugins/uikit.js' },
+    '~/plugins/prism',
   ],
   build: {
     vendor: ['axios'],
