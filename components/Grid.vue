@@ -1,0 +1,95 @@
+<template lang="pug">
+.container
+  h1 Grid
+  p
+    | 基本は
+    code
+      | div(uk-grid='')
+    | 。classで挙動を操作する。
+  h3 With width
+  p
+    code uk-child-width-*
+    | を指定すると、子要素のwidthをまとめて指定できる。
+  .uk-text-center(class='uk-child-width-1-2@s uk-child-width-1-3@m', uk-grid='')
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+  p
+    | 子要素ごとに指定したい場合は、子要素で
+    code uk-width-*
+    | を使う。
+  .uk-text-center(uk-grid='')
+    div(class='uk-width-auto@m')
+      .uk-card.uk-card-default.uk-card-body Auto
+    div(class='uk-width-1-3@m')
+      .uk-card.uk-card-default.uk-card-body 1-3
+    div(class='uk-width-expand@m')
+      .uk-card.uk-card-default.uk-card-body Expand
+  p
+    code uk-child-width-expand
+    | を使うと、1行に等間隔に並べることができる。
+  .uk-text-center(class='uk-child-width-expand@s', uk-grid='')
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+  .uk-text-center(class='uk-child-width-expand@s', uk-grid='')
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+  h3 Gutter
+  p
+    code uk-grid-large
+    code uk-grid-medium
+    code uk-grid-small
+    code uk-grid-collapse
+    | Gutterの幅(item同士の幅)の調整。
+  .uk-text-center(class='uk-child-width-expand@s uk-grid-large', uk-grid='')
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+  h3 Nested Grid
+  .uk-child-width-1-2.uk-text-center(uk-grid='')
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-child-width-1-2.uk-text-center(uk-grid='')
+        div
+          .uk-card.uk-card-primary.uk-card-body Item
+        div
+          .uk-card.uk-card-primary.uk-card-body Item
+  h3 Match Height
+  p
+    code .uk-grid-match
+    | を加える。
+  .uk-grid-match.uk-text-center(class='uk-child-width-expand@s', uk-grid='')
+    div
+      .uk-card.uk-card-default.uk-card-body Item
+    div
+      .uk-card.uk-card-default.uk-card-body
+        | Item
+        br
+        | ...
+    div
+      .uk-card.uk-card-default.uk-card-body
+        | Item
+        br
+        | ...
+        br
+        | ...
+</template>

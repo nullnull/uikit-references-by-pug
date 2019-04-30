@@ -1,5 +1,6 @@
 <template lang="pug">
-  main
+pre
+  code.
     h1 Grid
     p
       | 基本は
@@ -93,13 +94,3 @@
           br
           | ...
 </template>
-
-<script>
-export default {
-  transition: {
-    mode: 'out-in',
-    enterActiveClass: 'uk-animation-slide-right-small',
-    leaveActiveClass: 'uk-animation-slide-right-small uk-animation-reverse'
-  }
-}
-</script>

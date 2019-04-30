@@ -1,5 +1,6 @@
 <template lang="pug">
-  main
+.uk-section
+  .uk-container
     .uk-grid-match(class='uk-child-width-1-1@s uk-child-width-1-2@m', uk-grid='')
       div
         .uk-card.uk-card-default.uk-card-hover.uk-card-body
@@ -52,24 +53,7 @@
             | link
           p
             | アニメーションは本家参照
-      div
-        .uk-card.uk-card-default.uk-card-hover.uk-card-body
-          article.uk-article
-            h1.uk-article-title
-              a.uk-link-reset(href='') Article
-            p.uk-article-meta
-              | Written by null
-            p.uk-text-lead
-              | リード文。
-            p
-              | こんな感じで記事のための一通りのcssがある。
-            .uk-grid-small.uk-child-width-auto(uk-grid='')
-              div
-                a.uk-button.uk-button-text(href='#') Read more
-              div
-                a.uk-button.uk-button-text(href='#') 5 Comments
-              a(href='https://getuikit.com/docs/article' target='blank')
-                | link
+
       div
         .uk-card.uk-card-default.uk-card-hover.uk-card-body
           h1 Badge
@@ -114,6 +98,90 @@
               a(href='') fuga
             li
               span geho
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Button
+          a(href='https://getuikit.com/docs/button' target='blank')
+            | link
+          p
+            code uk-button
+            | と
+            code uk-button-default
+            | /
+            code uk-button-primary
+            | をaタグかbuttonタグにつければ良い
+          p(uk-margin='')
+            a.uk-button.uk-button-default(href='#') Link
+            button.uk-button.uk-button-default Default
+            button.uk-button.uk-button-default(disabled='') Disabled
+            button.uk-button.uk-button-primary Primary
+            button.uk-button.uk-button-secondary Secondary
+            button.uk-button.uk-button-danger Danger
+            button.uk-button.uk-button-text Text
+            button.uk-button.uk-button-link Link
+            button.uk-button.uk-button-default.uk-button-small small
+            button.uk-button.uk-button-default.uk-button-large large
+            .uk-button-group
+              button.uk-button.uk-button-secondary Button
+              button.uk-button.uk-button-secondary Button
+              button.uk-button.uk-button-secondary Button
+
+
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Close
+          a(href='https://getuikit.com/docs/close' target='blank')
+            | link
+          p
+            | a,buttonにuk-close属性をつければ閉じボタンになる
+          button.uk-close-large(type='button', uk-close='')
+          p ドロップボタンなどでも同じく
+          .uk-inline
+            button.uk-button.uk-button-default(type='button') Click
+            div(uk-drop='mode: click')
+              .uk-card.uk-card-body.uk-card-default
+                button.uk-drop-close(type='button', uk-close='')
+                p
+                  | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Description List
+          a(href='https://getuikit.com/docs/description-list' target='blank')
+            | link
+          dl.uk-description-list.uk-description-list-divider
+            dt Description term
+            dd Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            dt Description term
+            dd
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            dt Description term
+            dd
+              | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Divider
+          a(href='https://getuikit.com/docs/divider' target='blank')
+            | link
+          hr
+          hr.uk-divider-icon
+          hr.uk-divider-small
+          hr.uk-divider-vertical
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Animation
+          a(href='https://getuikit.com/docs/animation' target='blank')
+            | link
+          p
+            | アニメーションは本家参照
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Animation
+          a(href='https://getuikit.com/docs/animation' target='blank')
+            | link
+          p
+            | アニメーションは本家参照
       div
         .uk-card.uk-card-default.uk-card-hover.uk-card-body
           h1 Animation

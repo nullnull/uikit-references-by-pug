@@ -1,5 +1,6 @@
 <template lang="pug">
-  main
+.uk-section
+  .uk-container
     h1 Fixed Background
     p これ面白いねw
     .uk-margin-large

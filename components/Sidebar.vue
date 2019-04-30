@@ -5,14 +5,23 @@
   ul.uk-nav.uk-nav-default.tm-nav
     li.uk-nav-header Main
     li
-      nuxt-link(":to"="'/01_grid'")
+      nuxt-link(":to"="'/grid'")
         | 01 Grid
     li
-      nuxt-link(":to"="'/02_layout'")
+      nuxt-link(":to"="'/layout'")
         | 02 Layout
     li
-      nuxt-link(":to"="'/03_advance'")
-        | 03 Advance
+      nuxt-link(":to"="'/content'")
+        | 03 Content
+    li
+      nuxt-link(":to"="'/'")
+        | 04 Component
+    li
+      nuxt-link(":to"="'/specific'")
+        | 11 Specific
+    li
+      nuxt-link(":to"="'/advance'")
+        | 12 Advance
   .uk-margin
   small
     p
