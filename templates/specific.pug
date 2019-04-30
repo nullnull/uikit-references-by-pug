@@ -1,0 +1,109 @@
+.uk-child-width-1-1.uk-grid-match(uk-grid='')
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      h1 Slide show
+      a(href='https://getuikit.com/docs/slideshow' target='blank')
+        | link(slideshow)
+      br
+      a(href='https://getuikit.com/docs/dotnav' target='blank')
+        | link(dotnav)
+      p
+        | slideshow,dotnavを組み合わせると簡単にスライドショーが実装できる。
+      p
+        | Animation、Autoplay, Infinite Scroll, Ken Burns, Paralax, などめちゃくちゃリッチに設定できる。ここは公式参照。
+      .uk-position-relative.uk-light(uk-slideshow='')
+        ul.uk-slideshow-items
+          li
+            img(src='images/photo.jpg', alt='', uk-cover='')
+          li
+            img(src='images/dark.jpg', alt='', uk-cover='')
+          li
+            img(src='images/size1.jpg', alt='', uk-cover='')
+        a.uk-position-center-left.uk-position-small.uk-hidden-hover(href='#', uk-slidenav-previous='', uk-slideshow-item='previous')
+        a.uk-position-center-right.uk-position-small.uk-hidden-hover(href='#', uk-slidenav-next='', uk-slideshow-item='next')
+
+        .uk-position-bottom-center.uk-position-small
+          ul.uk-dotnav
+            li(uk-slideshow-item='0')
+              a(href='#') Item 1
+            li(uk-slideshow-item='1')
+              a(href='#') Item 2
+            li(uk-slideshow-item='2')
+              a(href='#') Item 3
+
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      article.uk-article
+        h1.uk-article-title
+          a.uk-link-reset(href='') Article
+        p.uk-article-meta
+          | Written by null
+        p.uk-text-lead
+          | リード文。
+        p
+          | こんな感じで記事のための一通りのcssがある。
+        .uk-grid-small.uk-child-width-auto(uk-grid='')
+          div
+            a.uk-button.uk-button-text(href='#') Read more
+          div
+            a.uk-button.uk-button-text(href='#') 5 Comments
+          a(href='https://getuikit.com/docs/article' target='blank')
+            | link
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      h1 Comment
+      a(href='https://getuikit.com/docs/comment' target='blank')
+        | link
+      p
+        | コメントのためのコンポーネント
+      ul.uk-comment-list
+        li
+          article.uk-comment.uk-visible-toggle(tabindex='-1')
+            header.uk-comment-header.uk-position-relative
+              .uk-grid-medium.uk-flex-middle(uk-grid='')
+                .uk-width-auto
+                  img.uk-comment-avatar(src='images/avatar.jpg', width='80', height='80', alt='')
+                .uk-width-expand
+                  h4.uk-comment-title.uk-margin-remove
+                    a.uk-link-reset(href='#') ぬるぽさん
+                  p.uk-comment-meta.uk-margin-remove-top
+                    a.uk-link-reset(href='#') 12 days ago
+              .uk-position-top-right.uk-position-small.uk-hidden-hover
+                a.uk-link-muted(href='#') Reply
+            .uk-comment-body
+              p
+                | コメントのためのコンポーネント。
+          ul
+            li
+              article.uk-comment.uk-comment-primary.uk-visible-toggle(tabindex='-1')
+                header.uk-comment-header.uk-position-relative
+                  .uk-grid-medium.uk-flex-middle(uk-grid='')
+                    .uk-width-auto
+                      img.uk-comment-avatar(src='images/avatar.jpg', width='80', height='80', alt='')
+                    .uk-width-expand
+                      h4.uk-comment-title.uk-margin-remove
+                        a.uk-link-reset(href='#') ガッさん
+                      p.uk-comment-meta.uk-margin-remove-top
+                        a.uk-link-reset(href='#') 12 days ago
+                  .uk-position-top-right.uk-position-small.uk-hidden-hover
+                    a.uk-link-muted(href='#') Reply
+                .uk-comment-body
+                  p
+                    | 返信用コンポーネント。
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      h1 Countdown
+      a(href='https://getuikit.com/docs/countdown' target='blank')
+        | link
+      .uk-grid-small.uk-child-width-auto.uk-margin(uk-grid='', uk-countdown='date: 2019-05-07T08:12:25+00:00')
+        div
+          .uk-countdown-number.uk-countdown-days
+        .uk-countdown-separator :
+        div
+          .uk-countdown-number.uk-countdown-hours
+        .uk-countdown-separator :
+        div
+          .uk-countdown-number.uk-countdown-minutes
+        .uk-countdown-separator :
+        div
+          .uk-countdown-number.uk-countdown-seconds

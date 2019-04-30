@@ -1,56 +1,34 @@
 <template lang="pug">
-.uk-section
-  .uk-container
-    h1 Background
-    p
-      code .uk-background-default
-      | などをつけるだけで、背景色がつく。
-    .uk-text-center(class='uk-child-width-1-2@s', uk-grid='')
-      div
-        .uk-background-default.uk-padding.uk-panel
-          p.uk-h4 Default
-      div
-        .uk-background-muted.uk-padding.uk-panel
-          p.uk-h4 Muted
-      div
-        .uk-background-primary.uk-light.uk-padding.uk-panel
-          p.uk-h4 Primary
-      div
-        .uk-background-secondary.uk-light.uk-padding.uk-panel
-          p.uk-h4 Secondary
-    p
-      | 背景画像を使うときは、cssでbackground-imageを指定しつつ、
-      code .uk-background-cover
-      code .uk-background-contain
-      | を使う。
-    .uk-light(class='uk-child-width-1-2@s', uk-grid='')
-      div
-        .uk-background-cover.uk-height-medium.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style='background-image: url(/_nuxt/assets/images/light.jpg);')
-          p.uk-h4 Cover
-      div
-        .uk-background-contain.uk-background-muted.uk-height-medium.uk-panel.uk-flex.uk-flex-center.uk-flex-middle(style='background-image: url(/_nuxt/assets/images/light.jpg);')
-          p.uk-h4 Contain
-    h1 Cover
-    p
-      | ブロック全体を覆いたい時は、ブロックに
-      code .uk-cover-container
-      | を付けてから、子要素(imgなど)で
-      code uk-cover
-      | 属性をつける
-    .uk-cover-container.uk-height-medium
-      img(src='images/dark.jpg', alt='', uk-cover='')
-
-
-
-
+main
+  div(uk-grid='')
+    .uk-section.scroll(class="uk-width-1-2@m uk-width-1-1@s")
+      .uk-container.uk-container-large
+        include ../templates/content.pug
+    .scroll(class="uk-width-1-2@m uk-visible@m")
+      pre
+        code#code.language-pug
+          include ../templates/content.txt
 </template>
 
 <script>
+import Prism from '~/plugins/prism'
+
 export default {
   transition: {
     mode: 'out-in',
     enterActiveClass: 'uk-animation-slide-right-small',
     leaveActiveClass: 'uk-animation-slide-right-small uk-animation-reverse'
+  },
+  mounted() {
+    Prism.highlightAll()
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.scroll
+  overflow scroll
+  height calc(100vh - 80px)
+pre
+  margin 0
+</style>

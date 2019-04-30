@@ -36,8 +36,8 @@
   top 80px
   bottom 0
   box-sizing border-box
-  width 240px !important
-  padding 40px 40px 60px 40px
+  width 160px !important
+  padding 30px 20px 50px 20px
   border-right 1px #e5e5e5 solid
   overflow auto
 </style>

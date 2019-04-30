@@ -1,0 +1,138 @@
+h1 Basic
+p
+  code .uk-section
+  | で垂直方向のpaddingを、
+  code .uk-container
+  | で水平方向のpadding（とコンテナ自体のwidth）を設定する。
+
+h1 Card
+pre
+  code
+    | div(uk-grid='')
+    |   div
+    |     .uk-card
+p
+  | が基本形
+
+.uk-grid-match(class='uk-child-width-1-1@s uk-child-width-1-2@m', uk-grid='')
+  div
+    .uk-card.uk-card-hover.uk-card-body
+      h3.uk-card-title Card
+      a(href='https://getuikit.com/docs/card' target='blank')
+        | link
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      h3.uk-card-title Default
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  div
+    .uk-card.uk-card-primary.uk-card-hover.uk-card-body.uk-light
+      h3.uk-card-title Primary
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+  div
+    .uk-card.uk-card-secondary.uk-card-hover.uk-card-body.uk-light
+      h3.uk-card-title Secondary
+      p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+.uk-margin
+div(class='uk-child-width-1-2@s', uk-grid='')
+  div
+    .uk-card.uk-card-default.uk-card-small.uk-card-body
+      h3.uk-card-title Small
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  div
+    .uk-card.uk-card-default.uk-card-large.uk-card-body
+      h3.uk-card-title Large
+      p
+        | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+  div
+    .uk-card.uk-card-default
+      .uk-card-header
+        .uk-grid-small.uk-flex-middle(uk-grid='')
+          .uk-width-auto
+            img.uk-border-circle(width='40', height='40', src='images/avatar.jpg')
+          .uk-width-expand
+            h3.uk-card-title.uk-margin-remove-bottom Title
+            p.uk-text-meta.uk-margin-remove-top
+              time(datetime='2016-04-01T19:00') April 01, 2016
+      .uk-card-body
+        p
+          | 上部のヘッダはuk-card-headerの中でuk-flexを使いつつ、そのコンテンツはuk-width-auto,uk-width-expandを使っている。
+      .uk-card-footer
+        a.uk-button.uk-button-text(href='#') Read more
+
+.uk-grid-match(class='uk-child-width-1-1@s uk-child-width-1-2@m', uk-grid='')
+  div
+    .uk-card.uk-card-default
+      .uk-card-media-top
+        img(src='images/light.jpg', alt='')
+      .uk-card-body
+        h3.uk-card-title Media Top
+        p
+          code .uk-card-media-top
+          | 使って画像を最大サイズ表示
+  div
+    .uk-card.uk-card-default
+      .uk-card-body
+        h3.uk-card-title Media Bottom
+        p
+          | これは
+          code .uk-card-media-bottom
+      .uk-card-media-bottom
+        img(src='images/light.jpg', alt='')
+.uk-margin
+div
+  .uk-card.uk-card-default.uk-grid-collapse.uk-margin(class='uk-child-width-1-2@s', uk-grid='')
+    .uk-card-media-left.uk-cover-container
+      img(src='images/light.jpg', alt='', uk-cover='')
+      canvas(width='600', height='400')
+    div
+      .uk-card-body
+        h3.uk-card-title Media Left
+        p
+          | 横に使いたい場合は
+          code .uk-card-media-left
+          code .uk-cover-container
+          | を併用する（coverがないと位置がおかしい）
+  .uk-card.uk-card-default.uk-grid-collapse.uk-margin(class='uk-child-width-1-2@s', uk-grid='')
+    .uk-card-media-right.uk-cover-container(class='uk-flex-last@s')
+      img(src='images/light.jpg', alt='', uk-cover='')
+      canvas(width='600', height='400')
+    div
+      .uk-card-body
+        h3.uk-card-title Media Right
+        p
+          | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+
+h1 Align
+h3 Image Align
+.uk-panel
+  img.uk-align-left.uk-margin-remove-adjacent(src='~/assets/images/light.jpg', width='225', height='150', alt='Example image')
+  p
+    | 画像を左に寄せつつ、適度に余白をつけたいときは
+    code uk-align-left
+    code uk-margin-remove-adjacent
+    | を使う。
+  p
+    | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+.uk-margin-large
+.uk-panel
+  img.uk-align-center.uk-margin-remove-adjacent(class='uk-align-right@m', src='~/assets/images/light.jpg', width='225', height='150', alt='Example image')
+  p
+    | このalignもレスポンシブ対応できる。
+    code uk-align-right@m
+    | とすれば、mのときだけ適用される。スマホではcenter、PCでright/leftで使うのが良さそう。
+  p
+    | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+
+h1 Column
+.uk-column-1-2.uk-column-divider
+  p
+    | 単にインライン要素を横に並べたい時は、gridを使うまでもなくcolumnを使う。この要素は
+    code .uk-column-1-2
+    | と書いてからpタグを並べただけである。
+  p
+    | 2番目のテキスト。適当に改行されて次のカラムに行く。Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore.
+  p
+    code .uk-column-divider
+    | によりdividerを表示できる。（任意）
