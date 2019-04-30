@@ -1,26 +1,34 @@
 <template lang="pug">
 main
   div(uk-grid='')
-    .uk-section(class="uk-width-1-2@m uk-width-1-1@s")
+    .uk-section.scroll(class="uk-width-1-2@m uk-width-1-1@s")
       .uk-container
-        Grid
-    div(class="uk-width-1-2@m uk-visible@m")
-      GridRaw
+        include ../templates/grid.pug
+    .scroll(class="uk-width-1-2@m uk-visible@m")
+      pre
+        code#code.language-pug
+          include ../templates/grid.txt
 </template>
 
 <script>
-import Grid from "@/components/Grid"
-import GridRaw from "@/components/GridRaw"
+import Prism from '~/plugins/prism'
 
 export default {
-  components: {
-    Grid,
-    GridRaw
-  },
   transition: {
     mode: 'out-in',
     enterActiveClass: 'uk-animation-slide-right-small',
     leaveActiveClass: 'uk-animation-slide-right-small uk-animation-reverse'
+  },
+  mounted() {
+    Prism.highlightAll()
   }
 }
 </script>
+
+<style lang="stylus" scoped>
+.scroll
+  overflow scroll
+  height calc(100vh - 80px)
+pre
+  margin 0
+</style>
