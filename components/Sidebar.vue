@@ -7,6 +7,12 @@
     li
       nuxt-link(":to"="'/01_grid'")
         | 01 Grid
+    li
+      nuxt-link(":to"="'/02_layout'")
+        | 02 Layout
+    li
+      nuxt-link(":to"="'/03_advance'")
+        | 03 Advance
   .uk-margin
   small
     p

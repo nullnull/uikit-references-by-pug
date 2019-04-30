@@ -22,5 +22,6 @@ export default {
 /* header, sidebarの高さと幅に合わせる */
 .tm-main
   padding-top 80px
-  padding-left 240px
+  @media screen and (min-width: 900px)
+    padding-left 240px
 </style>

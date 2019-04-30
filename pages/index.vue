@@ -2,26 +2,6 @@
   main
     .uk-grid-match(class='uk-child-width-1-1@s uk-child-width-1-2@m', uk-grid='')
       div
-        .uk-card.uk-card-hover.uk-card-body
-          h3.uk-card-title Card
-          a(href='https://getuikit.com/docs/card' target='blank')
-            | link
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      div
-        .uk-card.uk-card-default.uk-card-hover.uk-card-body
-          h3.uk-card-title Default
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      div
-        .uk-card.uk-card-primary.uk-card-hover.uk-card-body.uk-light
-          h3.uk-card-title Primary
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-      div
-        .uk-card.uk-card-secondary.uk-card-hover.uk-card-body.uk-light
-          h3.uk-card-title Secondary
-          p Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-
-
-      div
         .uk-card.uk-card-default.uk-card-hover.uk-card-body
           h1 Accordion
           a(href='https://getuikit.com/docs/accordion' target='blank')
@@ -42,6 +22,123 @@
               .uk-accordion-content
                 p
                   | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat proident.
+
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Alert
+          a(href='https://getuikit.com/docs/alert' target='blank')
+            | link
+          .uk-alert こんな感じのエリアのこと
+          div.uk-alert-danger(uk-alert='')
+            a.uk-alert-close(uk-close='')
+            h3 Notice!!
+            p
+              code uk-alert-danger
+              | などで色変更。
+              br
+              | aタグに
+              code uk-alert-close
+              | クラスで削除ボタン。
+              code uk-close
+              | をつければ罰印が作れる
+          p
+            | アニメーション関連も変更可能。
+            code duration
+            | など。
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Animation
+          a(href='https://getuikit.com/docs/animation' target='blank')
+            | link
+          p
+            | アニメーションは本家参照
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          article.uk-article
+            h1.uk-article-title
+              a.uk-link-reset(href='') Article
+            p.uk-article-meta
+              | Written by null
+            p.uk-text-lead
+              | リード文。
+            p
+              | こんな感じで記事のための一通りのcssがある。
+            .uk-grid-small.uk-child-width-auto(uk-grid='')
+              div
+                a.uk-button.uk-button-text(href='#') Read more
+              div
+                a.uk-button.uk-button-text(href='#') 5 Comments
+              a(href='https://getuikit.com/docs/article' target='blank')
+                | link
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Badge
+          a(href='https://getuikit.com/docs/badge' target='blank')
+            | link
+          p
+            span.uk-badge 100
+          p
+            | これ以外に説明がなかったw
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Base
+          a(href='https://getuikit.com/docs/base' target='blank')
+            | link
+          h3 headingについて
+          p
+            code .uk-h1
+            | などを使うと、その大きさに変化する。例えば、以下はh1タグで宣言しているが、h5と同じ大きさになる。
+          h1.uk-h5
+            | ここはh5
+          h3 blockquote
+          blockquote(cite='#')
+            p.uk-margin-small-bottom
+              | The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element.
+            footer
+              | Someone famous in
+              cite
+                a(href='#') Source Title
+          h3 code
+          pre
+            code
+              | print "hoge"
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Breadcrumb
+          a(href='https://getuikit.com/docs/breadcrumb' target='blank')
+            | link
+          ul.uk-breadcrumb
+            li
+              a(href='') hoge
+            li
+              a(href='') fuga
+            li
+              span geho
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Animation
+          a(href='https://getuikit.com/docs/animation' target='blank')
+            | link
+          p
+            | アニメーションは本家参照
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Animation
+          a(href='https://getuikit.com/docs/animation' target='blank')
+            | link
+          p
+            | アニメーションは本家参照
+      div
+        .uk-card.uk-card-default.uk-card-hover.uk-card-body
+          h1 Animation
+          a(href='https://getuikit.com/docs/animation' target='blank')
+            | link
+          p
+            | アニメーションは本家参照
+
+
+
+
 </template>
 
 <script>
