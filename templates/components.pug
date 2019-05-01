@@ -1,4 +1,4 @@
-.uk-grid-match.uk-child-width-1-1(uk-grid='')
+.uk-child-width-1-1(uk-grid='')
   div
     .uk-card.uk-card-default.uk-card-hover.uk-card-body
       h1 Accordion
@@ -43,6 +43,7 @@
         | アニメーション関連も変更可能。
         code duration
         | など。
+
   div
     .uk-card.uk-card-default.uk-card-hover.uk-card-body
       h1 Animation
@@ -58,8 +59,7 @@
         | link
       p
         span.uk-badge 100
-      p
-        | これ以外に説明がなかったw
+
   div
     .uk-card.uk-card-default.uk-card-hover.uk-card-body
       h1 Base
@@ -165,6 +165,148 @@
       hr.uk-divider-icon
       hr.uk-divider-small
       hr.uk-divider-vertical
+
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      h1  Drop
+      a(href='https://getuikit.com/docs/drop' target='blank')
+        | link
+      .uk-section-xsmall
+        p button要素などの下にuk-drop属性のdiv要素をつけるだけ。位置調整など詳細は公式参照。アニメーションもつけれる。
+        button.uk-button.uk-button-default(type='button') Hover
+        div(uk-drop='')
+          .uk-card.uk-card-body.uk-card-default
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+        button.uk-button.uk-button-default(type='button') Click
+        div(uk-drop='mode: click')
+          .uk-card.uk-card-body.uk-card-default
+            | Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.
+
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      h1 Dropdown
+      a(href='https://getuikit.com/docs/dropdown' target='blank')
+        | link
+      .uk-section-xsmall
+        p dropの中身にnavをつけたいときはこちらを使う（dropとの差異がいまいちわからない）。使い方はdropと同じ。
+        button.uk-button.uk-button-default(type='button') Hover
+        div(uk-dropdown='')
+          ul.uk-nav.uk-dropdown-nav
+            li.uk-active
+              a(href='#') Active
+            li
+              a(href='#') Item
+            li.uk-nav-header Header
+            li
+              a(href='#') Item
+            li
+              a(href='#') Item
+            li.uk-nav-divider
+            li
+              a(href='#') Item
+
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      h1 Form
+      a(href='https://getuikit.com/docs/form' target='blank')
+        | link
+      p
+        | 基本的にはformの各要素に対応するクラスをつけていくだけ。
+        | form要素をある程度グループ化して名前をつけたければ、fieldsetとlegendを使う。余白の調整にはuk-marginを使う…？いまいちかっこ悪い気がする。
+      form
+        fieldset.uk-fieldset
+          legend.uk-legend Legend1
+          .uk-margin
+            input.uk-input(type='text', placeholder='Input').uk-form-success
+          .uk-margin
+            select.uk-select.uk-form-danger
+              option Option 01
+              option Option 02
+          .uk-margin
+            textarea.uk-textarea(rows='5', placeholder='Textarea')
+        fieldset.uk-fieldset
+          legend.uk-legend Legend2
+          .uk-margin.uk-grid-small.uk-child-width-auto.uk-grid
+            label
+              input.uk-radio(type='radio', name='radio2', checked='')
+              |  A
+            label
+              input.uk-radio(type='radio', name='radio2')
+              |  B
+          .uk-margin.uk-grid-small.uk-child-width-auto.uk-grid
+            label
+              input.uk-checkbox(type='checkbox', checked='')
+              |  A
+            label
+              input.uk-checkbox(type='checkbox')
+              |  B
+          .uk-margin
+            input.uk-range(type='range', value='2', min='0', max='10', step='0.1')
+      p 
+        | ラベル付きの場合は、form要素またはfieldset要素にクラスを追加し、ラベルの位置を上/横などで変更できる。
+        | ラベルにはuk-form-labelを、ラベルに対応する要素にはuk-form-controlsを追加する。
+        code uk-form-controls-text
+        | を使うとよりよくalignできる…？（違いがわからなかった）
+      form.uk-form-stacked
+        .uk-margin
+          label.uk-form-label(for='form-stacked-text') Text
+          .uk-form-controls
+            input#form-stacked-text.uk-input(type='text', placeholder='Some text...')
+        fieldset.uk-form-horizontal.uk-fieldset
+          .uk-margin
+            label.uk-form-label(for='form-stacked-select') Select
+            .uk-form-controls
+              select#form-stacked-select.uk-select
+                option Option 01
+                option Option 02
+          .uk-margin
+            .uk-form-label Radio
+            .uk-form-controls
+              label
+                input.uk-radio(type='radio', name='radio1')
+                |  Option 01
+              br
+              label
+                input.uk-radio(type='radio', name='radio1')
+                |  Option 02
+      p アイコンの追加も楽。uk-inlineでくくってやりながら、uk-form-iconを使う。
+      form
+        .uk-margin
+          .uk-inline
+            span.uk-form-icon(uk-icon='icon: user')
+            input.uk-input(type='text')
+        .uk-margin
+          .uk-inline
+            span.uk-form-icon.uk-form-icon-flip(uk-icon='icon: lock')
+            input.uk-input(type='text')
+
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      h1 Heading
+      a(href='https://getuikit.com/docs/heading' target='blank')
+        | link
+      p
+        | headingのサイズ/スタイルを変更したいときに使う。…と思ったが、サイズ変わらなかった。なぜ。。
+      h1.uk-heading-small h3だけどsmall
+      h1.uk-heading-xlarge h3だけどxlarge
+      h3.uk-heading-divider dividerつき
+      h3.uk-heading-bullet bulletつき
+      h3.uk-heading-line 
+        span 横線つき
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      h1 Animation
+      a(href='https://getuikit.com/docs/animation' target='blank')
+        | link
+      p
+        | アニメーションは本家参照
+  div
+    .uk-card.uk-card-default.uk-card-hover.uk-card-body
+      h1 Animation
+      a(href='https://getuikit.com/docs/animation' target='blank')
+        | link
+      p
+        | アニメーションは本家参照
   div
     .uk-card.uk-card-default.uk-card-hover.uk-card-body
       h1 Animation

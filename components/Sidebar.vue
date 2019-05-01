@@ -22,6 +22,9 @@
     li
       nuxt-link(":to"="'/advance'")
         | 12 Advance
+    li
+      nuxt-link(":to"="'/ng'")
+        | 13 NG
   .uk-margin
   small
     p
